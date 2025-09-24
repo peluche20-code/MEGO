@@ -1,0 +1,27 @@
+{  
+  "version": 2,  
+  "builds": [  
+    {  
+      "src": "index.js",  
+      "use": "@vercel/static-build",  
+      "config": {  
+        "distDir": "build"  
+      }  
+    }  
+  ],  
+  "routes": [  
+    {  
+      "src": "/(.*)",  
+      "dest": "/index.html"  
+    }  
+  ],  
+  "env": {  
+    "REACT_APP_SUPABASE_URL": "https://vwevrgkfpkwofkuvortk.supabase.co",  
+    "REACT_APP_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3ZXZyZ2tmcGt3b2ZrdXZvcnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg3NTI5ODMsImV4cCI6MjA3NDMyODk4M30.TKwkLbDveOliIAD9umI7S8jETX33nOp1nooNJEWacP0"  
+  },  
+  "functions": {  
+    "build": {  
+      "maxLambdaSize": "15mb"  
+    }  
+  }  
+}
